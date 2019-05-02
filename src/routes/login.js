@@ -81,7 +81,7 @@ class Login extends Component {
 				<Card className={classes.card}>
 					<div className={classes.avatar}>
 						<img
-							src=""
+							src="https://firebasestorage.googleapis.com/v0/b/autoupd-6c999.appspot.com/o/instaru_logo.png?alt=media&token=f23b2e35-43c4-4bc0-a60e-4f9571c87aa5"
 							alt="Instaru"
 						/>
 					</div>
