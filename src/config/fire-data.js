@@ -13,7 +13,6 @@ import {
 } from 'react-admin';
 
 import { AUTH_LOGIN, AUTH_LOGOUT, AUTH_CHECK, AUTH_GET_PERMISSIONS } from 'react-admin';
-import generateRandomID from 'uuid/v4';
 
 
 const uuidv4 = require('uuid/v4');
@@ -24,12 +23,7 @@ const firebase = require("firebase");
 require("firebase/firestore");
 
 firebase.initializeApp({
-    apiKey: "AIzaSyAiyTqTAdKO68QeCEQNylVr6ukxkcZLXOk",
-    authDomain: "autoupd-6c999.firebaseapp.com",
-    databaseURL: "https://autoupd-6c999.firebaseio.com",
-    projectId: "autoupd-6c999",
-    storageBucket: "autoupd-6c999.appspot.com",
-    messagingSenderId: "135527685936"
+   // REMOVED
 });
 
 // Initialize Cloud Firestore through Firebase
@@ -82,7 +76,7 @@ function getDataWithId(DocumentSnapshot) {
 async function uploadFileToBucket(rawFile, storageRef) {
   console.log('Beginning upload');
   return storageRef.put(rawFile)
-      .then( snapshot => {
+      .then( () => {
           console.log('Uploaded file !');
           // Add url
           return storageRef.getDownloadURL();
@@ -323,7 +317,7 @@ export const FireAuth = (type, params) => {
                   return 'user'
               }
           })
-          .catch( error => {
+          .catch( () => {
               return 'user'
           });
   }

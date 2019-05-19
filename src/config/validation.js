@@ -3,7 +3,6 @@ import {
   minLength,
   maxLength,
   minValue,
-  maxValue,
   number,
   regex,
   email,
@@ -40,7 +39,7 @@ export const normalizeTime = (value, previousValue) => {
   return onlyNums.slice(0, 2) + ':' + onlyNums.slice(2, 4)
 }
 
-export const verifyTime = (value, allValues) => {
+export const verifyTime = (value) => {
 
 if (value.slice(0,2) > 23) {
   return 'Erro: hora é um campo que aceita valores de 00 a 23';

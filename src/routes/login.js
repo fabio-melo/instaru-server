@@ -9,11 +9,10 @@ import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import TextField from '@material-ui/core/TextField';
-import Typography from '@material-ui/core/Typography';
 
 import { MuiThemeProvider, createMuiTheme, withStyles } from '@material-ui/core/styles';
 
-import { Notification, translate, userLogin } from 'react-admin';
+import { translate, userLogin } from 'react-admin';
 
 import { theme } from '../config';
 
@@ -75,7 +74,7 @@ class Login extends Component {
 		this.props.userLogin(auth, this.props.location.state ? this.props.location.state.nextPathname : '/');
 
 	render() {
-		const { classes, handleSubmit, isLoading, translate, title } = this.props;
+		const { classes, handleSubmit, isLoading, translate } = this.props;
 		return (
 			<div className={classes.main}>
 				<Card className={classes.card}>

@@ -1,6 +1,6 @@
 {
-  "name": "taida-admin",
-  "description": "Interface de Gerenciamento do Taida",
+  "name": "instaru-server",
+  "description": "Interface de Gerenciamento do Instaru",
   "version": "0.1.0",
   "dependencies": {
     "firebase": "^5.5.5",
